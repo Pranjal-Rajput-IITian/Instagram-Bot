@@ -28,7 +28,7 @@ import shutil
 import glob
 from videoprops import get_audio_properties
 from pyrogram.errors import FloodWait
-from pyrogram.types import InputMediaPhoto, InputMediaVideo, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.types import InputMediaPhoto, InputMediaVideo, InputMediaDocument, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 IST = pytz.timezone('Asia/Kolkata')
 USER=Config.USER
 
@@ -148,7 +148,7 @@ async def upload(m, bot, chat_id, dir):
             print(chunk)
             media = []
             for photo in chunk:
-                media.append(InputMediaPhoto(media=photo))
+                media.append(InputMediaDocument(media=photo))
                 up+=1
                 rm-=1
             try:
