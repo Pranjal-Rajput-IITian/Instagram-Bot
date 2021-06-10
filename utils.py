@@ -101,7 +101,7 @@ async def upload(m, bot, chat_id, dir):
             has_audio=None
             GIF.append(video)
             pass
-    PIC=glob.glob(f"{dir}/*.jpg")
+    PIC=glob.glob(f"{dir}/*.jp")
     
     print(f"Gif- {GIF}")
     print(f"\n\nVideo - {VDO}")
