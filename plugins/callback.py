@@ -70,7 +70,7 @@ async def cb_handler(bot: Client, query: CallbackQuery):
         profile = Profile.from_username(insta.context, username)
         profilepichd = profile.profile_pic_url
         await query.answer()
-        await bot.send_document(chat_id=query.from_user.id, document=profilepichd, file_name=f"{username}.jp", force_document=True)
+        await bot.send_document(chat_id=query.from_user.id, document=profilepichd, file_name=f"{username}.jpg", force_document=True)
     
     
    
